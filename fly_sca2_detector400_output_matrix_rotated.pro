@@ -357,7 +357,7 @@ for band = 0,n_positions-1 do begin
  
       goes_subsection = image[ground_track_sample-102:ground_track_sample+102, ground_track_line-102:ground_track_line+102]
 
-      rotated_goes_subsection = rot(goes_subsection, -rotate_ghost_angle) 
+      rotated_goes_subsection = rot(goes_subsection,missing=0.0, -rotate_ghost_angle) 
 
 
       radiance_array[*,*,band+4] = rotated_goes_subsection
